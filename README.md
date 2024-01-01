@@ -1,8 +1,8 @@
-# Exzly Web | Next.js
+# Boilerplate | Next.js
 
 ## Table Of Content
 
-- [Exzly Web | Next.js](#exzly-web--nextjs)
+- [Boilerplate | Next.js](#boilerplate-web--nextjs)
   - [Table Of Content](#table-of-content)
   - [Spesification](#spesification)
 
