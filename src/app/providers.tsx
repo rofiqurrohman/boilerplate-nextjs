@@ -6,7 +6,7 @@ import { ReduxProvider } from '@/containers';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <ReduxProvider>
         <NextUIProvider>{children}</NextUIProvider>
       </ReduxProvider>

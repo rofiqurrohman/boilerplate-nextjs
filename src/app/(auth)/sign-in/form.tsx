@@ -4,10 +4,9 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Button, Input } from '@nextui-org/react';
 import { useForm } from 'react-hook-form';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { rootReducer, userReducer } from '@/containers';
 import { AuthService } from '@/services/auth.service';
+import { RiEyeFill, RiEyeOffFill } from '@remixicon/react';
 
 type FormValues = {
   identity: string;
@@ -61,14 +60,7 @@ export default function SignInForm() {
             type="button"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? (
-              <FontAwesomeIcon icon={faEye} className="pointer-events-none" />
-            ) : (
-              <FontAwesomeIcon
-                icon={faEyeSlash}
-                className="pointer-events-none"
-              />
-            )}
+            {showPassword ? <RiEyeFill /> : <RiEyeOffFill />}
           </button>
         }
       />

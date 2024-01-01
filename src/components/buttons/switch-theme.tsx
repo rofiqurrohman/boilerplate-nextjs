@@ -2,19 +2,26 @@
 
 import { Button, Tooltip } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
+import { RiSunLine, RiMoonLine } from '@remixicon/react';
 
 export default function NavbarSwitchTheme() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Tooltip content={theme === 'light' ? 'Switch to dark' : 'Switch to light'}>
+    <Tooltip
+      size="sm"
+      content={theme === 'light' ? 'Switch to dark' : 'Switch to light'}
+    >
       <Button
-        variant="flat"
-        color="secondary"
-        className="capitalize"
+        size="sm"
+        radius="full"
+        isIconOnly
+        variant="light"
+        color="foreground"
+        className=""
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
-        Theme
+        {theme === 'light' ? <RiSunLine size={20} /> : <RiMoonLine size={20} />}
       </Button>
     </Tooltip>
   );
